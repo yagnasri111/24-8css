@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<style>
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  margin: 0;
+}
+
+.google-dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 80px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  animation: dotsAnimation 1s ease-in-out, transformToBars 3.5s ease-in-out forwards;
+}
+
+.dot2 {
+  background-color: #EA4335;
+  animation-delay: 0.3s;
+}
+
+.dot3 {
+  background-color: #FBBC05;
+  animation-delay: 0.6s;
+}
+
+.dot4 {
+  background-color: #34A853;
+  animation-delay: 0.9s;
+}
+
+@keyframes dotsAnimation {
+  0%, 20% {
+      transform: translateY(0);
+      height: 20px;
+  }
+  25% {
+      transform: translateY(-20px);
+      height: 30px;
+  }
+  50% {
+      transform: translateY(20px);
+      height: 10px;
+  }
+  70% {
+      transform: translateY(0);
+      height: 20px;
+  }
+}
+
+@keyframes transformToBars {
+  60% {
+      transform: translateY(0);
+      height: 20px;
+      border-radius: 50%;
+  }
+  70% {
+      height: 60px;
+      border-radius: 10px;
+  }
+  75% {
+      height: 40px;
+      border-radius: 10px;
+  }
+  80% {
+      height: 70px;
+      border-radius: 10px;
+  }
+  85% {
+      height: 50px;
+      border-radius: 10px;
+  }
+  100% {
+      transform: translateY(0);
+      height: var(--final-height);
+      border-radius: 10px;
+  }
+}
+
+.dot1 {
+  --final-height: 60px;
+}
+
+.dot2 {
+  --final-height: 40px;
+}
+
+.dot3 {
+  --final-height: 70px;
+}
+
+.dot4 {
+  --final-height: 50px;
+}
+
+</style>
+</head>
+<body>
+<div class="google-dots">
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+    <div class="dot dot4"></div>
+</div>
+</body>
+</html>
